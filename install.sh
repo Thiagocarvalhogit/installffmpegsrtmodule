@@ -128,7 +128,6 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
   --enable-libmp3lame \
   --enable-libvorbis \
   --enable-libvpx \
-  --enable-libx264 \
   --enable-nonfree \
   --enable-libsrt && \
 PATH="$HOME/bin:$PATH" make -j$NBCORE && \
