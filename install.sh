@@ -91,8 +91,6 @@ PATH="$HOME/bin:$PATH" ./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME
 PATH="$HOME/bin:$PATH" make -j$NBCORE && \
 make -j$NBCORE install
 
-
-
 echo ------------------------------- libaom ----------------------------
 cd ~/ffmpeg_sources && \
 git -C aom pull 2> /dev/null || git clone --depth 1 https://aomedia.googlesource.com/aom && \
