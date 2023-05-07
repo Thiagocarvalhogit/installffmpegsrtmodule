@@ -63,15 +63,6 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
 PATH="$HOME/bin:$PATH" make -j$NBCORE && \
 make -j$NBCORE install
 
-echo ------------------------------- lib x265 ----------------------------
-sudo apt-get -y install mercurial libnuma-dev && \
-cd ~/ffmpeg_sources && \
-if cd x265 2> /dev/null; then hg pull && hg update && cd ..; else hg clone https://bitbucket.org/multicoreware/x265; fi && \
-cd x265/build/linux && \
-PATH="$HOME/bin:$PATH" cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX="$HOME/ffmpeg_build" -DENABLE_SHARED=off ../../source && \
-PATH="$HOME/bin:$PATH" make -j$NBCORE && \
-make -j$NBCORE install
-
 
 echo ------------------------------- libvpx ----------------------------
 cd ~/ffmpeg_sources && \
@@ -100,14 +91,7 @@ PATH="$HOME/bin:$PATH" ./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME
 PATH="$HOME/bin:$PATH" make -j$NBCORE && \
 make -j$NBCORE install
 
-echo ------------------------------- libopus ----------------------------
-cd ~/ffmpeg_sources && \
-git -C opus pull 2> /dev/null || git clone --depth 1 https://github.com/xiph/opus.git && \
-cd opus && \
-./autogen.sh && \
-./configure --prefix="$HOME/ffmpeg_build" --disable-shared && \
-make -j$NBCORE && \
-make -j$NBCORE install
+
 
 echo ------------------------------- libaom ----------------------------
 cd ~/ffmpeg_sources && \
@@ -145,11 +129,9 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
   --enable-libfdk-aac \
   --enable-libfreetype \
   --enable-libmp3lame \
-  --enable-libopus \
   --enable-libvorbis \
   --enable-libvpx \
   --enable-libx264 \
-  --enable-libx265 \
   --enable-nonfree \
   --enable-libsrt && \
 PATH="$HOME/bin:$PATH" make -j$NBCORE && \
