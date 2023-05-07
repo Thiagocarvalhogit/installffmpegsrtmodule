@@ -118,8 +118,7 @@ PATH="$HOME/bin:$PATH" cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX="$HOME/f
 PATH="$HOME/bin:$PATH" make -j$NBCORE && \
 make -j$NBCORE install
 
-echo ------------------------------- libsrt taken here: https://medium.com/@eyevinntechnology/using-ffmpeg-and-srt-to-transport-video-signal-to-the-cloud-7160960f846a ----------------------------
-# debugging taken from here: https://github.com/Haivision/srt/issues/389
+echo ------------------------------- srt --------------------------------
 sudo apt-get -y install libssl-dev tclsh && \
 cd ~/ffmpeg_sources && \
 git clone https://github.com/Haivision/srt.git && \
