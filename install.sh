@@ -8,6 +8,8 @@ sudo apt-get update -qq && sudo apt-get -y install \
   git-core \
   libass-dev \
   libfreetype6-dev \
+  libgnutls28-dev \
+  libmp3lame-dev \
   libsdl2-dev \
   libtool \
   libva-dev \
@@ -16,11 +18,13 @@ sudo apt-get update -qq && sudo apt-get -y install \
   libxcb1-dev \
   libxcb-shm0-dev \
   libxcb-xfixes0-dev \
-  pkg-config \
-  texinfo \
   libdav1d-dev \
   libopus-dev \
   libfdk-aac-dev \
+  meson \
+  pkg-config \
+  texinfo \
+  yasm \
   wget \
   ninja-build \
   zlib1g-dev
@@ -35,15 +39,6 @@ cd nasm-2.15.05 && \
 ./autogen.sh && \
 PATH="$HOME/bin:$PATH" ./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME/bin" && \
 make  && \
-make install
-
-echo ------------------------------- yasm ---------------------------- modificar
-cd ~/ffmpeg_sources && \
-wget -O yasm-1.3.0.tar.gz https://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz && \
-tar xzvf yasm-1.3.0.tar.gz && \
-cd yasm-1.3.0 && \
-./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME/bin" && \
-make && \
 make install
 
 echo ------------------------------- lib x264 ----------------------------
