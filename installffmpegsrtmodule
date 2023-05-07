@@ -23,14 +23,14 @@ sudo apt-get update -qq && sudo apt-get -y install \
 
 mkdir -p ~/ffmpeg_sources ~/bin
 
-# function installLib {
-#   echo installing $1 - flag $2
-#   sudo apt-get install $1
-# }
+function installLib {
+echo installing $1 - flag $2
+sudo apt-get install $1
+}
 
-# installLib nasm 
+installLib nasm 
 
-# sudo apt-get install nasm
+sudo apt-get install nasm
 
 
 echo ------------------------------- nasm ----------------------------
