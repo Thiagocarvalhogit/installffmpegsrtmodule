@@ -81,15 +81,6 @@ PATH="$HOME/bin:$PATH"
 make && \
 make install
 
-echo ------------------------------- libvmaf --------------------------
-cd ~/ffmpeg_sources && \
-wget https://github.com/Netflix/vmaf/archive/v2.1.1.tar.gz && \
-tar xvf v2.1.1.tar.gz && \
-mkdir -p vmaf-2.1.1/libvmaf/build &&\
-cd vmaf-2.1.1/libvmaf/build && \
-meson setup -Denable_tests=false -Denable_docs=false --buildtype=release --default-library=static .. --prefix "$HOME/ffmpeg_build" --bindir="$HOME/bin" --libdir="$HOME/ffmpeg_build/lib" && \
-ninja && \
-ninja install
 
 echo ------------------------------- srt --------------------------------
 sudo apt-get -y install libssl-dev tclsh && \
@@ -116,15 +107,13 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
   --bindir="$HOME/bin" \
   --enable-libaom \
   --enable-libass \
-  --enable-libfdk-aac \
+   --enable-gpl \
   --enable-libfreetype \
   --enable-libmp3lame \
   --enable-libopus \
   --enable-libsvtav1 \
   --enable-libdav1d \
   --enable-libvorbis \
-  --enable-libvpx \
-  --enable-libvmaf \
   --enable-libx264 \
   --enable-libx265 \
   --enable-libsrt && \
@@ -132,6 +121,5 @@ PATH="$HOME/bin:$PATH"
 make  && \
 make install && \
 hash -r
-
 
 source ~/.profile
