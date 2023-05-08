@@ -81,7 +81,6 @@ PATH="$HOME/bin:$PATH"
 make && \
 make install
 
-
 echo ------------------------------- srt --------------------------------
 sudo apt-get -y install libssl-dev tclsh && \
 cd ~/ffmpeg_sources && \
