@@ -1,1 +1,2 @@
-
+Youtube RTMP - Streaming - From Srt
+ffmpeg -re -i "srt://0.0.0.0:5010?pkt_size=1316&mode=listener" -f flv "rtmp://a.rtmp.youtube.com/live2/+streamkey"
