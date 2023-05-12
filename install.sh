@@ -127,7 +127,6 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
   --enable-libwebp \
   --enable-libdavs2 \
   --enable-libopenmpt \
-  --enable-libaribb24 \
   --enable-libzimg \
   --enable-libvmaf \
   --enable-libxml2 \
