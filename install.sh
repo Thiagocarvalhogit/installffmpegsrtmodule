@@ -21,6 +21,7 @@ sudo apt-get update -qq && sudo apt-get -y install \
   libdav1d-dev \
   libopus-dev \
   libfdk-aac-dev \
+  #librtmp-dev \
   meson \
   pkg-config \
   texinfo \
@@ -115,33 +116,22 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
   --enable-libsvtav1 \
   --enable-libdav1d \
   --enable-libvorbis \
-  --enable-libvpx \
   --enable-nonfree \
   --enable-openssl \
   --enable-postproc \
-  --enable-librtmp \
+  #--enable-librtmp \
   --enable-version3 \
   --enable-libx264 \
   --enable-libx265 \
   --enable-libzmq \
   --enable-libwebp \
-  --enable-libopenmpt \
   --enable-libzimg \
   --enable-libvmaf \
   --enable-libxml2 \
   --enable-gmp \
   --enable-libfribidi \
-  --enable-libgme \
   --enable-libfontconfig \
-  --enable-libgsm \
-  --enable-libilbc \
-  --enable-libmodplug \
-  --enable-libopencore-amrnb \
-  --enable-libopencore-amrwb \
-  --enable-libopenh264 \
-  --enable-libopenjpeg \
   --enable-libpulse \
-  --enable-librsvg \
   --enable-librubberband \
   --enable-libsmbclient \
   --enable-libsnappy \
