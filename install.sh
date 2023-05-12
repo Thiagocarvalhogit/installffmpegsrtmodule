@@ -120,7 +120,6 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
   --enable-nonfree \
   --enable-openssl \
   --enable-postproc \
-  --enable-smal \
   --enable-librtmp \
   --enable-version3 \
   --enable-libdash \
