@@ -27,7 +27,8 @@ sudo apt-get update -qq && sudo apt-get -y install \
   yasm \
   wget \
   ninja-build \
-  zlib1g-dev
+  zlib1g-dev \
+  libssl-dev
 
 mkdir -p ~/ffmpeg_sources ~/bin
 
@@ -105,16 +106,60 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
   --ld="g++" \
   --bindir="$HOME/bin" \
   --enable-libaom \
+  --enable-gnutls \
   --enable-libass \
-   --enable-gpl \
+  --enable-libfdk-aac \
+  --enable-gpl \
   --enable-libfreetype \
   --enable-libmp3lame \
   --enable-libopus \
   --enable-libsvtav1 \
   --enable-libdav1d \
   --enable-libvorbis \
+  --enable-libvpx \
+  --enable-nonfree \
+  --enable-openssl \
+  --enable-postproc \
+  --enable-smal \
+  --enable-librtmp \
+  --enable-version3 \
+  --enable-libdash \
   --enable-libx264 \
   --enable-libx265 \
+  --enable-libzmq \
+  --enable-libwebp \
+  --enable-libdavs2 \
+  --enable-libopenmpt \
+  --enable-libaribb24 \
+  --enable-decklink \
+  --enable-libzimg \
+  --enable-libvmaf \
+  --enable-libxml2 \
+  --enable-libsvthevc \
+  --enable-gmp \
+  --enable-libfribidi \
+  --enable-libgme \
+  --enable-avresample \
+  --enable-libbs2b \
+  --enable-libcaca \
+  --enable-libflite \
+  --enable-libfontconfig \
+  --enable-libgsm \
+  --enable-libilbc \
+  --enable-libmodplug \
+  --enable-libopencore-amrnb \
+  --enable-libopencore-amrwb \
+  --enable-libopenh264 \
+  --enable-libopenjpeg \
+  --enable-libpulse \
+  --enable-librsvg \
+  --enable-librubberband \
+  --enable-libsmbclient \
+  --enable-libsnappy \
+  --enable-libsoxr \
+  --enable-libspeex \
+  --enable-libssh \
+  --enable-libtheora \
   --enable-libsrt && \
 PATH="$HOME/bin:$PATH" 
 make  && \
