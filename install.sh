@@ -8,6 +8,7 @@ sudo apt-get update -qq && sudo apt-get -y install \
   git-core \
   libass-dev \
   libfreetype6-dev \
+  libgnutls28-dev \
   libmp3lame-dev \
   libsdl2-dev \
   libtool \
@@ -105,7 +106,6 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
   --ld="g++" \
   --bindir="$HOME/bin" \
   --enable-libaom \
-  --enable-gnutls \
   --enable-libass \
   --enable-libfdk-aac \
   --enable-gpl \
