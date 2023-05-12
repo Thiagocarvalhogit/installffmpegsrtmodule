@@ -8,7 +8,6 @@ sudo apt-get update -qq && sudo apt-get -y install \
   git-core \
   libass-dev \
   libfreetype6-dev \
-  libgnutls28-dev \
   libmp3lame-dev \
   libsdl2-dev \
   libtool \
