@@ -21,7 +21,6 @@ sudo apt-get update -qq && sudo apt-get -y install \
   libdav1d-dev \
   libopus-dev \
   libfdk-aac-dev \
-  #librtmp-dev \
   meson \
   pkg-config \
   texinfo \
@@ -119,7 +118,6 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
   --enable-nonfree \
   --enable-openssl \
   --enable-postproc \
-  #--enable-librtmp \
   --enable-version3 \
   --enable-libx264 \
   --enable-libx265 \
@@ -138,8 +136,8 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
   --enable-libsoxr \
   --enable-libspeex \
   --enable-libssh \
-  --enable-libtheora \
-  --enable-libsrt && \
+  --enable-libsrt
+  --enable-libtheora && \
 PATH="$HOME/bin:$PATH" 
 make  && \
 make install && \
