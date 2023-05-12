@@ -136,7 +136,6 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
   --enable-gmp \
   --enable-libfribidi \
   --enable-libgme \
-  --enable-avresample \
   --enable-libbs2b \
   --enable-libcaca \
   --enable-libflite \
