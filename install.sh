@@ -130,7 +130,6 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
   --enable-libfribidi \
   --enable-libfontconfig \
   --enable-libpulse \
-  --enable-libspeex \
   --enable-libsrt
   --enable-libtheora && \
 PATH="$HOME/bin:$PATH" 
