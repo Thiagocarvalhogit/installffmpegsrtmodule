@@ -121,7 +121,6 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
   --enable-version3 \
   --enable-libx264 \
   --enable-libx265 \
-  --enable-libxml2 \
   --enable-gmp \
   --enable-libfribidi \
   --enable-libfontconfig \
