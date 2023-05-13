@@ -131,7 +131,6 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
   --enable-libfontconfig \
   --enable-libpulse \
   --enable-libspeex \
-  --enable-libssh \
   --enable-libsrt
   --enable-libtheora && \
 PATH="$HOME/bin:$PATH" 
