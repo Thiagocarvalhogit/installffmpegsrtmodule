@@ -40,9 +40,9 @@ mkdir -p ~/ffmpeg_sources ~/bin
 # Build and install NASM
 echo "----------------------------- nasm ----------------------------"
 cd ~/ffmpeg_sources && \
-wget https://www.nasm.us/pub/nasm/releasebuilds/2.15.05/nasm-2.15.05.tar.bz2 && \
-tar xxjvf nasm-2.15.05.tar.bz2 && \
-cd nasm-2.15.05 && \
+wget https://www.nasm.us/pub/nasm/releasebuilds/2.16rc12/nasm-2.16rc12-xdoc.tar.bz2 && \
+tar xxjvf nasm-2.16rc12-xdoc.05.tar.bz2 && \
+cd nasm-2.16rc12-xdoc && \
 ./autogen.sh && \
 PATH="$HOME/bin:$PATH" ./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME/bin" && \
 make && \
